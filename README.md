@@ -2,7 +2,7 @@
 ![NHS Data](https://img.shields.io/badge/NHS%20England-005EB8?style=flat&logo=data:image/png;base64,&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Complete-brightgreen)
 # NHS England A&E Performance Dashboard
-### April 2025 – March 2026 | Portfolio Case Study
+### April 2025 – March 2026 
 
 ---
 
