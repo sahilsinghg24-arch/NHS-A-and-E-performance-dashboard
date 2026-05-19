@@ -5,15 +5,15 @@
 
 ## Project Overview
 
-This project delivers a full-year analytical dashboard of NHS England Accident & Emergency performance, covering **April 2025 to March 2026**. The dataset spans **209 NHS trusts across 7 regions**, comprising **2,385 rows × 17 columns** of monthly operational data. The focus is on **Type 1 (major emergency) departments** and **other attendance types**, with particular attention to waiting time breaches — the NHS's most visible and politically sensitive performance metric.
+This project delivers a full year analytical dashboard of NHS England Accident & Emergency performance, covering **April 2025 to March 2026**. The dataset spans **209 NHS trusts across 7 regions**, comprising **2,385 rows × 17 columns** of monthly operational data. The focus is on **Type 1 (major emergency) departments** and **other attendance types**, with particular attention to waiting time breaches the NHS's most visible and politically sensitive performance metric.
 
 ---
 
 ## The Real Business Problem
 
-The NHS 4-hour A&E target — that 76% of patients should be seen, treated, and either admitted or discharged within 4 hours — has not been consistently met nationally for years. The consequences are real: prolonged waits increase patient risk, create unsafe crowding, and signal systemic breakdown in hospital flow.
+The NHS 4-hour A&E target that 76% of patients should be seen, treated, and either admitted or discharged within 4 hours has not been consistently met nationally for years. The consequences are real: prolonged waits increase patient risk, create unsafe crowding, and signal systemic breakdown in hospital flow.
 
-This dashboard was built to answer questions that raw data alone cannot: **Why** are waits happening? **Where** is the system under most strain? **When** does it get worse? And critically — are there trusts managing to beat the odds that others can learn from?
+This dashboard was built to answer questions that raw data alone cannot: **Why** are waits happening? **Where** is the system under most strain? **When** does it get worse? And critically are there trusts managing to beat the odds that others can learn from?
 
 The analysis moves through three analytical layers: **descriptive** (what happened), **diagnostic** (why it happened), and **predictive** (what comes next).
 
@@ -127,7 +127,7 @@ Each monthly period was categorised:
 
 **T1 Attendances (monthly, per trust):**
 - Range: 0 to ~35,000 per trust per month
-- Highly right-skewed — a small number of large trusts (e.g., UHB, Manchester) drive a disproportionate share of volume
+- Highly right-skewed a small number of large trusts (e.g., UHB, Manchester) drive a disproportionate share of volume
 - National monthly T1 volume ranged from **1,271,830** (February) to **1,450,980** (January)
 
 **T1 Breach Rate (per trust, full year):**
@@ -147,7 +147,7 @@ Each monthly period was categorised:
 - Scatter plot confirms: operational management, not volume, is the primary performance driver
 
 **Month vs. Breach Rate:**
-- Pearson correlation between Month_Index and breach rate: slight U-shape — best in summer (Q2), worst in winter (Q3–Q4)
+- Pearson correlation between Month_Index and breach rate: slight U-shape best in summer (Q2), worst in winter (Q3–Q4)
 - January consistently represents the annual peak across all years of NHS data
 
 **Season vs. 12-Hour Wait Rate:**
@@ -159,7 +159,7 @@ Each monthly period was categorised:
 
 Box plot analysis by region revealed:
 - North West and Midlands: both high median breach rates AND high variance (trusts performing both very badly and moderately)
-- North East and Yorkshire: lowest median breach rate with tightest distribution — most consistent region in England
+- North East and Yorkshire: lowest median breach rate with tightest distribution most consistent region in England
 - London: mid-range breach rate but highest 12-hour wait rate among better-performing regions (3.77%), suggesting bed flow issues despite better front-door throughput
 
 ### 3.4 Outlier Detection
@@ -192,7 +192,7 @@ Separating demand-side from flow-side pressure:
 - **16,743,700** were Type 1 (major emergency) — representing **63.5%** of all attendances
 - **9,616,840** were other attendance types (urgent treatment centres, walk-ins, minor injury units)
 - Peak demand month: **January 2026** with **1,450,980** Type 1 attendances
-- Trough month: **February 2026** with **1,271,830** — a **12.3% drop** from peak
+- Trough month: **February 2026** with **1,271,830**  a **12.3% drop** from peak
 
 ### 2. The 4-Hour Breach Crisis
 
@@ -202,12 +202,12 @@ Separating demand-side from flow-side pressure:
 - **Worst month: January 2026** at **42.9%** — nearly **79% above target**
 - Over the full year, **6,604,228 patients** waited longer than 4 hours
 
-> **Methodology note:** Breach rates were calculated as `SUM(T1_Over4hrs) / SUM(T1_Attendances)` — not a simple average of rates. This prevents the "average of averages" distortion that artificially inflates performance in low-volume months.
+> **Methodology note:** Breach rates were calculated as `SUM(T1_Over4hrs) / SUM(T1_Attendances)` not a simple average of rates. This prevents the "average of averages" distortion that artificially inflates performance in low-volume months.
 
 ### 3. The 12-Hour Wait Crisis
 
-- **570,931 patients** waited over 12 hours — approximately **1 in every 29 emergency patients**
-- Winter quarter recorded **176,941** 12-hour waits — **60.7% more than Summer** (110,059)
+- **570,931 patients** waited over 12 hours approximately **1 in every 29 emergency patients**
+- Winter quarter recorded **176,941** 12-hour waits  **60.7% more than Summer** (110,059)
 
 | Season | T1 Attendances | 12-Hour Waits | 12-Hour Wait Rate |
 |---|---|---|---|
@@ -250,8 +250,8 @@ Separating demand-side from flow-side pressure:
 | # | Problem | Finding | Recommendation |
 |---|---|---|---|
 | 1 | What is overall A&E demand? | 26.4M total; T1 = 63%; Peak January 2026 | Monitor Jan–Feb capacity annually |
-| 2 | Are we meeting the 76% standard? | No. 39.4% breach — 1.6× the 24% max | NHS-wide investment in patient flow |
-| 3 | Does winter cause more demand or more waits? | T1 demand fell 2.3%; 12-hr waits rose 64.5% — exit block | Fund social care discharge, not A&E expansion |
+| 2 | Are we meeting the 76% standard? | No. 39.4% breach  1.6× the 24% max | NHS-wide investment in patient flow |
+| 3 | Does winter cause more demand or more waits? | T1 demand fell 2.3%; 12-hr waits rose 64.5%  exit block | Fund social care discharge, not A&E expansion |
 | 4 | Which regions underperform? | North West worst (42.6%); South East best (36.9%) | Replicate North East & Yorkshire flow models |
 | 5 | Can high-volume trusts still perform? | Yes. Calderdale: 192k T1, 16.6% breach | Replicate Gold Standard protocols nationally |
 | 6 | Who are the worst trusts? | Mid Cheshire (56.4%), Hull (55.5%), Shrewsbury (55.5%) | NHS England improvement notices |
@@ -288,63 +288,3 @@ Not as `AVERAGE(T1_Breach_Rate)`. A simple average treats a trust seeing 5,000 p
 - **Power Query / Pivot Tables** — weighted aggregation across regional and seasonal dimensions
 - **NHS England Official Statistics** — primary data source
 
----
-
-## Recruiter Q&A — Data Analyst (UK)
-
-### Technical Questions
-
-**Q: Walk me through your data cleaning process.**
-A: I consolidated 12 monthly NHS Excel releases into a single flat table, standardised column names to snake_case, cast numeric columns from text format, handled zero-attendance trust records by filtering them from rate calculations (not total volumes), and created four calculated columns. I also verified that regional subtotals reconciled to national totals as a consistency check.
-
-**Q: Why did you use a weighted breach rate rather than a simple average?**
-A: A simple average of trust-level breach rates gives equal weight to a trust with 500 attendances and one with 50,000. The national figure should reflect actual patient experience — so I calculated `SUM(breaches) / SUM(attendances)` across all trusts. This is the statistically correct approach and matches how NHS England publishes its own national figures.
-
-**Q: How did you identify that winter pressure was a flow problem, not a demand problem?**
-A: By separating T1 attendance volume from 12-hour wait rates seasonally. Winter attendance was actually 2.3% *lower* than summer, yet 12-hour waits were 60.7% *higher*. That divergence — fewer patients, far more severe waits — is the statistical signature of exit block: patients ready for admission backing up in A&E because wards are full.
-
-**Q: How did you handle outliers in the trust-level analysis?**
-A: I used the IQR method — flagging trusts more than 1.5× IQR above Q3 as underperformers. I also cross-validated with absolute thresholds (>50% breach = high-risk). Importantly, I distinguished between outliers caused by genuine poor performance versus small-volume trusts with statistical noise, which is why I only benchmarked trusts with material Type 1 volumes.
-
-**Q: What Excel functions did you use most?**
-A: SUMIF and SUMIFS for conditional aggregation by region/season; pivot tables with calculated fields for weighted rates; IFERROR to handle division-by-zero on zero-attendance records; and named ranges to make formula auditing cleaner. For the dashboard layer, I used data validation and slicers for interactivity.
-
-**Q: What would you do differently if you had Python/SQL available?**
-A: The data consolidation step (merging 12 monthly files) would be far faster with pandas `pd.concat()`. I'd also use statistical libraries (scipy.stats) to formally test whether regional differences are statistically significant, and produce a proper correlation matrix across all numeric variables. The Excel approach required manual steps that Python would automate in minutes.
-
----
-
-### Analytical / Business Questions
-
-**Q: What is the most important finding from this analysis?**
-A: That the NHS winter crisis is primarily an exit block problem, not a demand problem. If you address only A&E capacity (more cubicles, more staff), you miss the root cause — patients can't leave A&E because there are no ward beds to move them to. The data shows this clearly: fewer winter attendances, dramatically more severe waits.
-
-**Q: Which region would you prioritise for intervention?**
-A: The North West — it has the highest breach rate (42.6%) and the second-highest 12-hour wait rate (5.01%), meaning it's failing on both throughput and severity simultaneously. However, the more interesting question is *why* North East and Yorkshire achieves a 1.63% 12-hour wait rate — that model deserves national study.
-
-**Q: How would you present this to a non-technical audience?**
-A: I'd lead with three numbers: 1 in 29 emergency patients waited over 12 hours; the NHS is operating at 1.6× its maximum acceptable breach threshold; and winter makes waits 60% more severe without meaningfully more patients. Then I'd show the regional map and the best/worst trust comparison — those land immediately with any audience.
-
-**Q: Calderdale has a 16.6% breach rate with 192k patients. What would you investigate next?**
-A: I'd want to understand their bed management and discharge protocols — how quickly are admitted patients moved to wards? What's their SDEC (Same Day Emergency Care) pathway utilisation? Do they have co-located ambulatory care that diverts appropriate cases? The breach rate difference between Calderdale and Mid Cheshire (56.4%) is almost certainly explained by in-hospital flow decisions, not front-door volume.
-
----
-
-### Behavioural / Situational Questions (UK Context)
-
-**Q: Tell me about a time you found an insight that challenged the initial assumption.**
-A: *[Frame around the winter demand finding]* "The assumption going into this was that winter A&E pressure was primarily a demand surge — more people getting sick, turning up at A&E. The data proved that wrong. Type 1 attendances actually fell slightly in winter. The explosion in 12-hour waits was entirely driven by what happens downstream — ward congestion, delayed discharges, exit block. That reframing has real policy implications: it means more A&E beds won't solve the problem."
-
-**Q: How do you ensure the accuracy of your analysis?**
-A: Three methods: (1) reconciliation — checking that regional subtotals sum to national totals; (2) sense-checking outputs against published NHS England headline figures; (3) deliberately testing edge cases, such as what happens to breach rate calculations when a trust has zero attendances for a month.
-
-**Q: Why healthcare / NHS data?**
-A: NHS data is publicly available, operationally complex, and directly connected to patient outcomes — it's a domain where analytical rigour genuinely matters. Understanding the difference between Type 1, 2, and 3 A&E classifications, or between exit block and demand-side pressure, requires domain knowledge that goes beyond just knowing Excel or Python. I find that intersection of data and domain expertise more interesting than generic business analytics.
-
-**Q: What would you build next if given more time?**
-A: A predictive model — using the seasonal pattern (Q2 recovery, Q3 onset, Q4 peak) to forecast January breach rates from October onwards, giving commissioners a 3-month window to pre-position capacity. I'd also want to link this A&E dataset to NHS bed occupancy data to formally model the exit block hypothesis with regression.
-
----
-
-*Analysis period: April 2025 – March 2026 | Data source: NHS England Official Statistics*
-*Dashboard built for portfolio demonstration of healthcare data analysis methodology*
