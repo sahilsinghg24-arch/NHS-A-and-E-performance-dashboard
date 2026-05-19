@@ -12,6 +12,19 @@
 This project delivers a full year analytical dashboard of NHS England Accident & Emergency performance, covering **April 2025 to March 2026**. The dataset spans **209 NHS trusts across 7 regions**, comprising **2,385 rows × 17 columns** of monthly operational data. The focus is on **Type 1 (major emergency) departments** and **other attendance types**, with particular attention to waiting time breaches the NHS's most visible and politically sensitive performance metric.
 
 ---
+## Key findings at a glance
+
+| Metric | Value |
+|---|---|
+| National breach rate | 39.4% — 1.6× the acceptable threshold |
+| Patients waiting 12+ hours | 570,931 (1 in every 29) |
+| Worst region | North West — 42.6% breach |
+| Best trust | Calderdale — 16.6% breach (192k patients) |
+| Winter vs Summer waits | 60.7% more 12-hr waits in winter |
+
+---
+## Tools
+`Microsoft Excel` `Power Query` `Pivot Tables` `NHS England Open Data`
 
 ## The Real Business Problem
 
