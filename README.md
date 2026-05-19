@@ -5,6 +5,7 @@
 ### April 2025 – March 2026 
 
 ---
+![Dashboard Preview]<img width="981" height="1357" alt="nhsd" src="https://github.com/user-attachments/assets/0f7666c8-cb05-4c81-9f1c-0d22d53a7672" />
 
 ## Project Overview
 
